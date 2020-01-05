@@ -1,0 +1,18 @@
+#root = planet
+
+# Habitat Cultural
+col_habitat_caravaneer = {
+	icon = 20
+
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = caravaneer_habitat
+	}
+	planet_modifier = {
+	    #trade_value_mult = 0.10
+		pop_happiness = 0.10
+	}
+	weight_modifier = {
+		base = 10000
+	}
+}

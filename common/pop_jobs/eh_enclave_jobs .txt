@@ -1,0 +1,85 @@
+###################
+# Enclave Jobs
+###################
+# Backup jobs
+eh_curator = {
+	category = eh_curator
+	is_capped_by_modifier = no
+	building_icon = building_master_archive 
+	clothes_texture_index = 2
+		
+	possible_pre_triggers = {
+		has_owner = yes
+	}
+
+	possible = {
+		owner = { 	
+			is_country_type = enclave
+			has_country_flag = curator_enclave_country
+		}
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 3
+			society_research = 3
+		}
+	}
+	
+	weight = {
+		weight = 0.1 # Only if no other jobs exist
+
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}
+
+eh_artisan = {
+	category = eh_artisan
+	is_capped_by_modifier = no
+	building_icon = building_artist_patron
+	clothes_texture_index = 2
+		
+	possible_pre_triggers = {
+		has_owner = yes
+	}
+
+	possible = {
+		owner = { 	
+			is_country_type = enclave
+			has_country_flag = artisan_enclave_country
+		}
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			unity = 3	
+			consumer_goods = 1
+		}
+	}
+	
+	weight = {
+		weight = 0.1 # Only if no other jobs exist
+
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}

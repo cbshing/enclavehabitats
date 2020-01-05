@@ -1,0 +1,136 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+# Enclave Deposits
+# Curator Deposits
+d_eh_galactic_library = {
+	is_for_colonizeable = yes
+	
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.30
+		planet_jobs_engineering_research_produces_mult = 0.30
+		planet_jobs_physics_research_produces_mult = 0.30
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_eh_leviathan_archive = {
+	is_for_colonizeable = yes
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					has_country_flag = curator_enclave_country
+					is_regular_empire = yes 
+				}
+			}
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_eh_artifact_preservation_lab = {
+	is_for_colonizeable = yes
+	
+	resources = {
+		produces = {
+			physics_research = 25
+			society_research = 25
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_eh_exobiology_exhibit = {
+	is_for_colonizeable = yes
+	
+	planet_modifier = {
+	    trade_value_mult = 0.01
+		pop_happiness = 0.10
+	}
+	
+	resources = {
+		produces = {
+			society_research = 25
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Enclave Deposits
+d_eh_hab_alloy_5 = {
+	icon = "unused/d_space_walk"
+	is_for_colonizeable = yes
+	
+	resources = {
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { 
+					OR = {
+						is_country_type = enclave
+						is_country_type = caravaneer_home
+					}
+				}
+			}
+			minerals = 25
+		}
+		produces = {
+			alloys = 5
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

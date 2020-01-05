@@ -1,0 +1,117 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+# Caravaneer Deposits
+d_cara_galatron_vault = {
+	is_for_colonizeable = yes
+	
+	planet_modifier = { 
+		job_soldier_add = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_cara_elite_connoisseur = {
+	is_for_colonizeable = yes
+	
+	planet_modifier = { 
+		planet_amenities_add = 10
+	}
+	
+	resources = {
+		produces = {
+			food = 10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_cara_high_top = {
+	is_for_colonizeable = yes
+	
+	planet_modifier = { 
+		planet_amenities_add = 20
+		job_entertainer_add = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_cara_galactic_suite = {
+	is_for_colonizeable = yes
+	
+	planet_modifier = { 
+		planet_housing_add = 10
+		planet_amenities_add = 10
+	}
+	
+	resources = {
+		produces = {
+			energy = 100
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#d_numistic_temple = {
+#	is_for_colonizeable = yes
+#	
+#	planet_modifier = { 
+#		job_merchant_add = 2
+#		job_priest_add = 2
+#	}
+#	
+#	drop_weight = {
+#		weight = 0
+#	}
+#}
+
+#d_vengralian_hq = {
+#	is_for_colonizeable = yes
+#	
+#	planet_modifier = { 
+#		job_merchant_add = 2
+#		job_clerk_add = 2
+#	}
+#	
+#	drop_weight = {
+#		weight = 0
+#	}
+#}
+
+#d_racket_hq = {
+#	is_for_colonizeable = yes
+#	
+#	planet_modifier = { 
+#		job_merchant_add = 1
+#		job_clerk_add = 3
+#	}
+#	
+#	drop_weight = {
+#		weight = 0
+#	}
+#}

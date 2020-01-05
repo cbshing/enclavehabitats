@@ -1,0 +1,88 @@
+populate_enclave_habitat = {
+	while = {
+		limit = { num_pops < 35 }
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			traits = random
+		}
+		
+		while = {
+			count = 5
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+repopulate_enclave_habitat_pops = {
+	if = {
+		limit = { num_pops < 35 }
+		create_pop = {
+			species = random
+			ethos = random
+		}
+	}
+}
+
+generate_curator_habitat_deposits_and_blockers = {
+	# deposits
+	add_deposit = d_eh_galactic_library
+	add_deposit = d_eh_leviathan_archive
+	add_deposit = d_eh_artifact_preservation_lab
+	add_deposit = d_eh_exobiology_exhibit
+	add_deposit = d_eh_hab_alloy_5 
+}
+
+generate_curator_habitat_buildings_and_districts  = {
+	# districts
+	add_district = district_hab_housing 
+	add_district = district_hab_housing
+	add_district = district_hab_housing  
+	add_district = district_hab_science  
+	add_district = district_hab_science 
+	add_district = district_hab_science  
+	add_district = district_hab_cultural
+	add_district = district_hab_cultural
+	
+	# buildings
+	add_building = building_hab_major_capital #3 jobs
+	add_building = building_enclave_autocurating_vault #6 jobs
+	add_building = building_institute
+	add_building = building_enclave_stronghold  #7 jobs  
+	add_building = building_affluence_center 
+	add_building = building_nourishment_center 
+	add_building = building_class_4_singularity 
+	add_building = building_enclave_archive
+}
+
+generate_artist_habitat_deposits_and_blockers = {
+	# deposits
+
+	add_deposit = d_eh_hab_alloy_5 
+}
+
+generate_artist_habitat_buildings_and_districts  = {
+	# districts
+	add_district = district_hab_housing 
+	add_district = district_hab_housing
+	add_district = district_hab_housing  
+	add_district = district_hab_cultural  
+	add_district = district_hab_cultural 
+	add_district = district_hab_cultural  
+	add_district = district_hab_cultural
+	add_district = district_hab_cultural
+	
+	# buildings
+	add_building = building_hab_major_capital #3 jobs
+	#add_building = building_enclave_autocurating_vault #6 jobs
+	#add_building = building_institute
+	add_building = building_enclave_stronghold  #7 jobs  
+	add_building = building_affluence_center 
+	add_building = building_nourishment_center 
+	add_building = building_class_4_singularity 
+	#add_building = building_enclave_archive
+}

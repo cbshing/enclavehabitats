@@ -1,0 +1,25 @@
+@small_trail_W = 10
+@small_trail_L = 60
+@medium_trail_W = 25
+@medium_trail_L = 150
+@large_trail_W = 50
+@large_trail_L =  300
+
+######################           Habitat             ########################
+
+entity = {
+	name = "caravaneer_orbital_habitat_01_entity"
+	locator = { name = root }
+	locator = { name = "part1" }
+	
+	attach = { "part1" 		 		= "caravaneer_station_01_section_entity" }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 10 }
+	state = { name = "death" state_time = 13.3 looping = no 
+		event = { time = 13.2 node = "station" particle = "large_player_ship_explosion_particle" keep_particle = yes trigger_once = yes }
+	}
+	
+	
+}
+

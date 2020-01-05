@@ -1,0 +1,207 @@
+#############
+# Enclave buildings
+#############
+
+#############
+# Government building
+#############
+
+building_enclave_stronghold = {
+	can_build = no
+	icon = building_fortress  
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = enclave_habitat
+	}
+	
+	convert_to = {
+		building_fortress
+	}
+	
+	planet_modifier = {
+		job_soldier_add = 4
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_country_type = enclave }
+		}
+		modifier = {
+			job_enforcer_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+#############
+# Research building
+#############
+
+building_enclave_archive = {
+	can_build = no
+	icon = building_master_archive  
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = curator_habitat
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 75
+			society_research = 75
+			engineering_research = 75
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+#############
+# Unity building
+#############
+
+building_enclave_autocurating_vault = {
+	can_build = no
+	icon = building_autocurating_vault  
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = curator_habitat
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					is_country_type = enclave
+					has_country_flag = curator_enclave_country
+				}
+			}
+		}
+		modifier = {
+			job_culture_worker_add = 6
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 50
+			society_research = 50
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+building_enclave_forum = {
+	can_build = no
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = curator_habitat
+	}
+	
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			society_research = 15
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+#############
+# Amenity building
+#############
+
+building_enclave_residence = {
+	can_build = no
+	icon = building_paradise_dome
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = enclave_habitat
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 10
+	}
+	
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}

@@ -1,0 +1,35 @@
+#root = planet
+
+# Habitat Curator
+col_habitat_curator = {
+	icon = 22
+
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = curator_habitat
+	}
+	planet_modifier = {
+	    planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+	weight_modifier = {
+		base = 10000
+	}
+}
+
+# Habitat Artisan
+col_habitat_artist = {
+	icon = 22
+
+	potential = {
+		is_planet_class = pc_habitat
+		has_planet_flag = artist_habitat
+	}
+	planet_modifier = {
+	    pop_happiness = 0.10
+	}
+	weight_modifier = {
+		base = 10000
+	}
+}

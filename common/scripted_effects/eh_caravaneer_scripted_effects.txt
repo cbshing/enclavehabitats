@@ -1,0 +1,64 @@
+populate_caravaneer_habitat = {
+	while = {
+		limit = { num_pops < 55 }
+		create_species = {
+			name = random
+			class = random_non_machine
+			portrait = random
+			traits = random
+		}
+		
+		while = {
+			count = 5
+			create_pop = {
+				species = last_created_species
+				ethos = random
+			}
+		}
+	}
+}
+
+repopulate_caravaneer_habitat_pops = {
+	if = {
+		limit = { num_pops < 55 }
+		create_pop = {
+			species = random
+			ethos = random
+		}
+	}
+}
+
+generate_caravaneer_habitat_deposits_and_blockers = {
+	# deposits
+	add_deposit = d_cara_galatron_vault
+	add_deposit = d_cara_elite_connoisseur
+	add_deposit = d_cara_high_top
+	add_deposit = d_cara_galactic_suite
+	add_deposit = d_eh_hab_alloy_5
+}
+
+generate_caravaneer_habitat_buildings_and_districts  = {
+	# districts
+	add_district = district_hab_housing 
+	add_district = district_hab_housing
+	add_district = district_hab_housing  
+	add_district = district_hab_commercial 
+	add_district = district_hab_commercial 
+	add_district = district_hab_cultural  
+	add_district = district_hab_cultural 
+	add_district = district_hab_cultural 
+					
+	# buildings
+	add_building = building_hab_major_capital #3 jobs
+	add_building = building_enclave_stronghold #4 jobs
+	add_building = building_cara_numistic #5 jobs
+	add_building = building_cara_trium 
+	add_building = building_cara_racket #3 jobs
+	add_building = building_affluence_center 
+	add_building = building_nourishment_center 
+	add_building = building_class_4_singularity 
+	add_building = building_cara_casino #3 jobs
+	add_building = building_cara_casino #3 jobs
+	add_building = building_cara_casino #3 jobs
+	add_building = building_cara_amusement 
+}

@@ -1,0 +1,45 @@
+###################
+# Caravaneer Jobs
+###################
+# Backup jobs
+cara_gambler = {
+	category = eh_caravaneer
+	is_capped_by_modifier = no
+	building_icon = building_cara_casino 
+	clothes_texture_index = 2
+		
+	possible_pre_triggers = {
+		has_owner = yes
+	}
+
+	possible = {
+		owner = { 	
+			is_country_type = caravaneer_home
+		}
+		planet = {
+			has_building = building_cara_casino
+		}
+	}
+	
+	resources = {
+		category = planet_jobs
+		produces = {
+			energy = 2
+		}
+	}
+	
+	weight = {
+		weight = 0.1 # Gambling is not a career
+
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}

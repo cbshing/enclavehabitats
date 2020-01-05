@@ -1,0 +1,305 @@
+#############
+# Caravaneer buildings
+#############
+
+#############
+# Amenities building
+#############
+
+building_cara_casino  = {
+	can_build = no
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = caravaneer_habitat
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 10
+		planet_housing_add = 2
+		job_entertainer_add = 1
+		job_enforcer_add = 1
+		job_clerk_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 50
+		}	
+	}
+	
+	triggered_desc = {
+		text = job_entertainer_effect_desc
+		text = job_enforcer_effect_desc
+		text = job_clerk_effect_desc
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+building_cara_amusement = {
+	can_build = no
+	icon = building_amusement_megaplex  
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = caravaneer_habitat
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+#building_cara_clubs = {
+#	can_build = no
+#	icon = building_underground_clubs
+#	
+#	potential = {
+#		exists = owner
+#		is_planet_class = pc_habitat
+#		has_planet_flag = caravaneer_habitat
+#	}
+#	
+#	planet_modifier = {
+#		planet_amenities_add = 5
+#		job_entertainer_add = 2
+#	}
+#
+#	resources = {
+#		category = planet_buildings
+#		upkeep = {
+#			energy = 2
+#		}
+#	}
+#	
+#	triggered_desc = {
+#		text = job_entertainer_effect_desc
+#	}
+#	
+#	on_queued = {
+#	}
+#
+#	on_unqueued = {
+#	}
+#		
+#	upgrades = {
+#	}
+#}
+
+#building_cara_coliseum = {
+#	can_build = no
+#	icon = building_holo_theatres
+#	
+#	potential = {
+#		exists = owner
+#		is_planet_class = pc_habitat
+#		has_planet_flag = caravaneer_habitat
+#	}
+#	
+#	planet_modifier = {
+#		planet_amenities_add = 5
+#		job_entertainer_add = 1
+#	}
+#
+#	resources = {
+#		category = planet_buildings
+#		produces = {
+#			trigger = {
+#				exists = owner
+#				owner = { is_country_type = caravaneer_home }
+#			}
+#			minerals = 25
+#			alloys = 5
+#		}
+#		upkeep = {
+#			energy = 2
+#		}
+#	}
+#	
+#	triggered_desc = {
+#		text = job_entertainer_effect_desc
+#	}
+#	
+#	on_queued = {
+#	}
+#
+#	on_unqueued = {
+#	}
+#		
+#	upgrades = {
+#	}
+#}
+
+
+#############
+# Trade building
+#############
+
+#building_cara_tourism_agency = {
+#	can_build = no
+#	icon = building_xeno_tourism_agency   
+#	
+#	potential = {
+#		exists = owner
+#		is_planet_class = pc_habitat
+#		has_planet_flag = caravaneer_habitat
+#	}
+#	
+#	planet_modifier = {
+#		trade_value_mult = 0.05
+#		job_clerk_add = 1
+#	}
+#
+#	resources = {
+#		category = planet_buildings
+#		upkeep = {
+#			energy = 5
+#		}
+#	}
+#	
+#	triggered_desc = {
+#		text = job_clerk_effect_desc
+#	}
+#	
+#	on_queued = {
+#	}
+#
+#	on_unqueued = {
+#	}
+#		
+#	upgrades = {
+#	}
+#}
+
+#############
+# Special building
+#############
+
+building_cara_numistic = {
+	can_build = no
+	icon = building_temple_of_prosperity   
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = caravaneer_habitat
+	}
+	
+	planet_modifier = {
+		job_merchant_add = 2
+		job_priest_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 3
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+building_cara_trium = {
+	can_build = no
+	icon = building_commercial_forum   
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = caravaneer_habitat
+	}
+	
+	planet_modifier = {
+		trade_value_mult = 0.1
+		planet_housing_mult = 0.10
+		planet_pops_organics_food_upkeep_mult = -0.10
+	}
+
+	resources = {
+		category = planet_buildings	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
+
+building_cara_racket = {
+	can_build = no
+	icon = building_waste_reprocessing_center   
+	
+	potential = {
+		exists = owner
+		is_planet_class = pc_habitat
+		has_planet_flag = caravaneer_habitat
+	}
+	
+	planet_modifier = {
+		job_clerk_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 10
+		}	
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	on_queued = {
+	}
+
+	on_unqueued = {
+	}
+		
+	upgrades = {
+	}
+}
